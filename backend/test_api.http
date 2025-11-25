@@ -1,0 +1,28 @@
+### Test Backend Health
+GET http://localhost:8000/
+
+### Fetch Stock Data
+###POST http://localhost:8000/data/get-stock-data
+###Content-Type: application/json
+
+###{
+  ###"symbol": "TCS",
+  ###"days": 5
+###}
+
+POST http://localhost:8000/api/analyze
+Content-Type: application/json
+
+{
+  "text": "Hello from REST Client"
+}
+
+### Backend Health
+GET http://127.0.0.1:8000/
+
+
+### Fetch Stock History
+GET http://127.0.0.1:8000/data/history?symbol=TCS&days=30
+
+### Technical Analysis
+GET http://127.0.0.1:8000/ta/TCS
